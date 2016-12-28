@@ -1,5 +1,5 @@
 export class CourseService {
 	getCourses() : string[] {
-		return ["course1", "course2", "course3", "course4"]
+		return ["course1", "course2", "course3"]
 	}
 }
