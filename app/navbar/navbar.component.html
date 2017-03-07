@@ -1,0 +1,33 @@
+<ul class="topnav">
+	<!-- Left side -->
+	<li>
+		<a [routerLink]="['/']"><md-icon class="icon_home" aria-label="Home">home</md-icon></a>
+		<!--<a [routerLink]="['/']">home</a>-->
+	</li>
+
+	<!-- Right side -->
+	<li class="desktop-view right"><a [routerLink]="['/login']">Login</a></li>
+	<li class="desktop-view right"><a [routerLink]="['/about']">About</a></li>
+	<li class="desktop-view right dropdown">
+		<a href="javascript:void(0)" class="dropbtn">Account</a>
+		<div class="dropdown-content">
+	      <a href="#">Link 1</a>
+	      <a href="#">Link 2</a>
+	      <a href="#">Link 3</a>
+	    </div>
+	</li>
+
+	<li class="device-view right dropdown">
+		<a href="javascript:void(0)" (click)="displayMenu()"><md-icon class="icon_menu" aria-label="Menu">menu</md-icon></a>
+		<div [hidden]="hideMenu" class="dropdown-content-device">
+	     	<a [routerLink]="['/login']">Login</a>
+			<a [routerLink]="['/about']">About</a>
+			<a href="javascript:void(0)" (click)="displaySubmenu(0)">Account</a>
+			<div [hidden]="hideSubmenu1[0]" class="dropdown-content-device">
+		      <a href="#">Link 1</a>
+		      <a href="#">Link 2</a>
+		      <a href="#">Link 3</a>
+		    </div>
+	    </div>
+	</li>
+</ul>
